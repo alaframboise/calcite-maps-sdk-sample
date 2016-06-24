@@ -404,6 +404,12 @@
         }
       });
 
+      // Bonus: Collapse popup floating and docked!
+      query(".esri-popup .esri-title").on("click", function(e){
+        query(".esri-popup .esri-container").toggleClass("esri-popup-collapsed");
+        app.activeView.popup.reposition();
+      });
+
       /******************************************************************
        *
        * Apply Calcite Maps CSS classes to change application on the fly
